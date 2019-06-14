@@ -1,0 +1,75 @@
+<!-- Ben Podrazhansky -->
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta name="author" content="Ben Podrazhansky">
+    <link rel="stylesheet" href=".css/darkTheme.css">
+    <link rel="stylesheet" href=".css/tutorialStyles.css">
+</head>
+
+<body>
+    <header>
+        <h1> 1 Syntax </h1>
+        <h3> Next: </h3>
+        <hr>
+    </header>
+    <h2> CSS Syntax </h2>
+    <p> The syntax of CSS files appears in the following format for all
+        of a type elements, elements of a class, or elements with an id:<br>
+        <pre>
+            elementType { property:value; property:value;}
+            elementType innerElementType { property:value;
+                                            property:value;}
+            elementType1, elementType2, elementType3    {property:value;} /* Multiple element types at once */
+            /* This is a comment in CSS */
+            .className { property:value; }
+            .className elementType {property:value;}
+            #idName {property:value;}
+        </pre>
+        Here is an example with actual code:
+        <pre>
+            h1 { color:blue; background-color:green;}
+            h1 p {color:black; /* This sets the style for paragraphs inside of h1 headers */
+                text-align:center;}
+            .highlight    {background-color:yellow} /* Define the style for a class named "highlight" */
+        </pre>
+    </p>
+    <hr>
+    <h2> The &lt;style&gt; tag </h2>
+    <p>
+        You can put this code in a .css file as is, or you can put it in the head of an html file with the
+        &lt;style&gt; tag as follows:
+        <pre>
+            &lt;head&gt;
+                &lt;style&lt;
+                    /* CSS Code Here
+                        The &lt;style&gt; is basically a mini .css file. */
+                    h1  {color:red;}
+                &lt;/style&gt;
+            &lt;/head&gt;
+        </pre>
+    </p>
+    <hr>
+    <h2> Linking external .css files </h2>
+    <p>
+        Multiple web pages can use the same .css file. link your page to the file as follows:
+        <pre>
+            &lt;head&gt;
+                &lt;link rel="stylesheet" href="relative/path/to/file.css"&gt;
+            &lt;/head&gt;
+        </pre>
+    </p>
+    <hr>
+    <h2> Inline CSS </h2>
+    <p> You don't have to define the style for all elements before-hand, even though it is more scalable.
+        You can define the style for elements in the element tag as follows:</p>
+    <pre>
+&lt;h4 style="property:value; property:value;"&gt; text here  &lt;/h4&gt;
+&lt;h4 style="property:value; property:value;"&gt; text here  &lt;/h4&gt;
+            </pre>
+    <h4 style="color:red;"> Text here </h4>
+    </p>
+</body>
+
+</html>

@@ -1,0 +1,237 @@
+<!-- Ben Podrazhansky -->
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta name="author" content="Ben Podrazhansky">
+    <link rel="stylesheet" href=".css/darkTheme.css">
+    <link rel="stylesheet" href=".css/tutorialStyles.css">
+    <style>
+        .shorthand {
+            background: red url('images/smileyFace.png') no-repeat top right;
+        }
+    </style>
+    <script>
+        function repeatHorizontal() {
+            document.getElementById("bckgndImgP1").innerHTML = "&lt;h1 style='background-image:url('images/verticalFadingStrip.png'); background-repeat: repeat-x;'&gt; Image 1 Repeats Horizontally &lt;/h1&gt;";
+            document.getElementById("bckgndImgP2").innerHTML = "&lt;h1 style='background-image:url('images/horizontalFadingStrip.png'); background-repeat: repeat-x;'&gt; Image 2 Repeats Horizontally &lt;/h1&gt;";
+
+            document.getElementById('bckgndImgH1').innerHTML = 'Image 1 Repeated Horizontally';
+            document.getElementById('bckgndImgH2').innerHTML = 'Image 2 Repeated Horizontally';
+
+            document.getElementById("bckgndImgH1").style.backgroundImage = "url('images/verticalFadingStrip.png')";
+            document.getElementById("bckgndImgH2").style.backgroundImage = "url('images/horizontalFadingStrip.png')";
+
+            document.getElementById("bckgndImgH1").style.backgroundRepeat = 'repeat-x';
+            document.getElementById("bckgndImgH2").style.backgroundRepeat = 'repeat-x';
+        }
+        function repeatVertical() {
+            document.getElementById("bckgndImgP1").innerHTML = "&lt;h1 style='background-image:url('images/verticalFadingStrip.png'); background-repeat: repeat-y;'&gt; Image 1 Repeats Horizontally &lt;/h1&gt;";
+            document.getElementById("bckgndImgP2").innerHTML = "&lt;h1 style='background-image:url('images/horizontalFadingStrip.png'); background-repeat: repeat-y;'&gt; Image 2 Repeats Horizontally &lt;/h1&gt;";
+
+            document.getElementById('bckgndImgH1').innerHTML = 'Image 1 Repeated Vertically';
+            document.getElementById('bckgndImgH2').innerHTML = 'Image 2 Repeated Vertically';
+
+            document.getElementById("bckgndImgH1").style.backgroundImage = "url('images/verticalFadingStrip.png')";
+            document.getElementById("bckgndImgH2").style.backgroundImage = "url('images/horizontalFadingStrip.png')";
+
+            document.getElementById("bckgndImgH1").style.backgroundRepeat = 'repeat-y';
+            document.getElementById("bckgndImgH2").style.backgroundRepeat = 'repeat-y';
+        }
+        function noBackground() {
+
+            document.getElementById("bckgndImgP1").innerHTML = "&lt;h1 style='background-image:none; background-repeat: no-repeat;'&gt; No Background Image &lt;/h1&gt;";
+            document.getElementById("bckgndImgP2").innerHTML = "&lt;h1 style='background-image:none; background-repeat: no-repeat;'&gt; No Background Image &lt;/h1&gt;";
+
+            document.getElementById('bckgndImgH1').innerHTML = 'No Background Image';
+            document.getElementById('bckgndImgH2').innerHTML = 'No Background Image';
+
+            document.getElementById("bckgndImgH1").style.backgroundImage = "None";
+            document.getElementById("bckgndImgH2").style.backgroundImage = "none";
+
+            document.getElementById("bckgndImgH1").style.backgroundRepeat = 'no-repeat';
+            document.getElementById("bckgndImgH2").style.backgroundRepeat = 'no-repeat';
+        }
+        function reset() {
+            document.getElementById("bckgndImgP1").innerHTML = "&lt;h1&gt; No Background Image &lt;/h1&gt;";
+            document.getElementById("bckgndImgP2").innerHTML = "&lt;h1&gt; No Background Image &lt;/h1&gt;";
+
+            document.getElementById('bckgndImgH1').innerHTML = 'No Background Image';
+            document.getElementById('bckgndImgH2').innerHTML = 'No Background Image';
+
+            document.getElementById("bckgndImgH1").style.backgroundImage = "None";
+            document.getElementById("bckgndImgH2").style.backgroundImage = "none";
+
+            document.getElementById("bckgndImgH1").style.backgroundRepeat = 'no-repeat';
+            document.getElementById("bckgndImgH2").style.backgroundRepeat = 'no-repeat';
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1> 2 Colors and backgrounds </h1>
+        <h3> <ins>Previous:</ins> <ins><a href="1 Syntax.htm">1 Syntax</a></ins> <ins>Next:</ins> <ins><a
+                    href="2 Colors and backgrounds.htm">2 Colors and backgrounds</a></ins></h3>
+        <hr>
+    </header>
+    <h2> Text color </h2>
+    <p> Set the color of the text with either, color name (if supported), rgb values, rgba values, hsl values, or hsla
+        values
+        as follows:
+        <pre>
+            color:white;
+            color:rgb(5, 5, 255);
+            color:rgba(10, 25, 255, 100);
+            color:hsl(10, 10, 10);
+            color:hsla(55, 200,255, 30);
+        </pre>
+        If you have a text editer like visual studio code, you may have access to a color picker that lets you choose
+        the
+        color and it enters the values for you.
+    </p>
+    <h2> background-color </h2>
+    <p> You can set the background color of an element the same way you would the text color, but the only difference is
+        that the property is 'background-color'.
+    </p>
+    <section class="example">
+        <pre>
+            &lt;p&gt; Normal paragraph &lt;/p&gt;
+            &lt;p style="background-color:lightgreen"&gt; This paragraph is lightgreen &lt;/p&gt;
+              <hr>
+            <p> Normal paragraph </p>
+            <p style="background-color:lightgreen;"> This paragraph is lightgreen </p>  
+        </pre>
+
+
+    </section>
+    <hr>
+    <h2> background-image and background-repeat </h2>
+    <p> Set the background image of an element with "background-image: url/or/path/to/image;".<br>
+        You can also make the background-image repeat itself horizontally or vertically as follows:</p>
+    <section class="example" style="align-content: center;">
+        <p> Make the below images repeat on an &lt;h1&gt; heading horizontally or vertically </p>
+        <ul class="horizontalList">
+            <li>
+                <p> Image 1 </p>
+                <img src="images/VerticalFadingStrip.png" width="4px">
+            </li>
+            <li>
+                <p> Image 2 </p>
+                <img src="images/horizontalFadingStrip.png" height="4px">
+            </li>
+        </ul>
+        <pre>
+        <p id="bckgndImgP1">&lt;h1&gt; No Background Image &lt;/h1&gt;</p>
+        <p id="bckgndImgP2">&lt;h1&gt; No Background Image &lt;/h1&gt;</p>
+        <hr> 
+        <h1 id="bckgndImgH1"> No Background Image </h1>
+        <h1 id="bckgndImgH2"> No Background Image </h1>
+        <hr></pre>
+        <button onClick="repeatHorizontal()"> Repeat Images Horizontally</button>
+        <button onClick="repeatVertical()"> Repeat Images Vertically</button>
+        <button onClick="noBackground()"> No Background </button>
+        <button onClick="reset()"> Reset </button>
+        <br><br>
+    </section>
+    <hr>
+    <h2> background-position and background-attachment </h2>
+    <h3 style="text-decoration: underline;"> background-position </h3>
+    <p>You can set the position of an image to the enums: 'left', 'right', 'top', 'botton', 'center', 'left center',
+        'right center', 'left top', 'left bottom', 'right top', 'right bottom', and any other logical combinations not
+        listed (like 'top right');<br>
+        or if you want something more specific, look at the <a href="Position.htm">Position tutorial</a>.
+    </p>
+    <h3 style="text-decoration:underline;"> background-attachment </h3>
+    <p> Use "background-attachment:fixed" to lock the position of a background on a screen.</p>
+    <section class="example">
+        <pre>
+        &lt;div 
+        style="background-image:url('images/smileyFace.png'); background-position:right top; background-attachment:fixed; height:10vw; overflow:scroll;"&gt;
+        &lt;h1&gt;Lorem Ipsum&lt;/h1&gt;
+&lt;p&gt;
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce placerat sodales orci eget malesuada. Ut
+    viverra tortor in ultricies congue. Mauris felis est, fringilla et convallis et, fermentum nec nibh. Nulla a
+    turpis sed risus lacinia convallis. Vivamus in dui eu nisl rhoncus varius et eget tortor. Phasellus
+    malesuada fermentum metus, non pellentesque tellus mollis suscipit. Curabitur id ligula hendrerit, semper
+    elit et, aliquet velit. Sed id viverra nibh, at venenatis nibh. Morbi nulla ante, ornare eget orci in,
+    eleifend semper lectus. In pharetra arcu et neque mattis mattis. Morbi nec diam dictum, auctor ex at,
+    hendrerit urna. Curabitur mattis lacus sit amet elit gravida bibendum. Donec congue mauris vestibulum massa
+    mollis, at ullamcorper magna ultrices.&lt;/p&gt;
+&lt;p&gt;
+    In luctus finibus nibh ut fringilla. Sed in vestibulum tellus. Aliquam id finibus leo. Curabitur varius
+    lorem ac mauris ornare, non placerat nisl lacinia. Phasellus vulputate ipsum id arcu tincidunt auctor. Sed
+    sed luctus urna, a venenatis eros. In id augue efficitur, ullamcorper diam nec, tincidunt sem.
+&lt;/p&gt;
+&lt;p&gt;Donec lorem ligula, sagittis non dui pellentesque, rhoncus tincidunt lacus. Curabitur lacus ipsum, laoreet
+    eget mollis sed, imperdiet quis nunc. Nullam ut mauris elit. Donec ullamcorper et erat at dictum. Ut maximus
+    pulvinar odio, in lacinia nisi accumsan quis. Maecenas id pharetra lectus. Nunc ut erat nec dolor sodales
+    malesuada in vitae nulla. Vivamus quis magna pharetra, faucibus urna at, dapibus eros. Maecenas fringilla
+    lacus at neque dictum condimentum. Nulla et nunc vulputate, ullamcorper massa sed, fringilla velit.&lt;/p&gt;
+    &lt;/div&gt;
+</pre>
+        <hr>
+        <div
+            style="background-image:url('images/smileyFace.png'); background-position:right top; background-attachment:fixed; height:10vw; overflow:scroll;">
+        
+            <h1>Lorem Ipsum</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce placerat sodales orci eget malesuada. Ut
+                viverra tortor in ultricies congue. Mauris felis est, fringilla et convallis et, fermentum nec nibh.
+                Nulla a
+                turpis sed risus lacinia convallis. Vivamus in dui eu nisl rhoncus varius et eget tortor. Phasellus
+                malesuada fermentum metus, non pellentesque tellus mollis suscipit. Curabitur id ligula hendrerit,
+                semper
+                elit et, aliquet velit. Sed id viverra nibh, at venenatis nibh. Morbi nulla ante, ornare eget orci in,
+                eleifend semper lectus. In pharetra arcu et neque mattis mattis. Morbi nec diam dictum, auctor ex at,
+                hendrerit urna. Curabitur mattis lacus sit amet elit gravida bibendum. Donec congue mauris vestibulum
+                massa
+                mollis, at ullamcorper magna ultrices.</p>
+            <p>
+                In luctus finibus nibh ut fringilla. Sed in vestibulum tellus. Aliquam id finibus leo. Curabitur varius
+                lorem ac mauris ornare, non placerat nisl lacinia. Phasellus vulputate ipsum id arcu tincidunt auctor.
+                Sed
+                sed luctus urna, a venenatis eros. In id augue efficitur, ullamcorper diam nec, tincidunt sem.
+            </p>
+            <p>Donec lorem ligula, sagittis non dui pellentesque, rhoncus tincidunt lacus. Curabitur lacus ipsum,
+                laoreet
+                eget mollis sed, imperdiet quis nunc. Nullam ut mauris elit. Donec ullamcorper et erat at dictum. Ut
+                maximus
+                pulvinar odio, in lacinia nisi accumsan quis. Maecenas id pharetra lectus. Nunc ut erat nec dolor
+                sodales
+                malesuada in vitae nulla. Vivamus quis magna pharetra, faucibus urna at, dapibus eros. Maecenas
+                fringilla
+                lacus at neque dictum condimentum. Nulla et nunc vulputate, ullamcorper massa sed, fringilla velit.</p>
+        </div>
+    </section>
+    <hr>
+    <h2> Background Shorthand</h2>
+    <p> You can set the properties of a background in CSS with one line by putting the values one after another without listing the property in the format:<br>
+        background: background-color background-image background-repeat background-position</p>
+        <div class = "example">
+            <pre>
+        &lt;head&gt;
+            &lt;style&gt;
+                div {
+                    background: red url('smiley.png')
+                }    
+            &lt;/style&gt;
+        &lt;/head&gt;
+
+        &lt;body&gt;
+                &lt;div&gt;
+                    &lt;h1&gt; Heading &lt;/h1&gt;
+                    &lt;p&gt; Paragraph &lt;/p&gt;
+                &lt;/div&gt;
+        &lt;/body&gt;
+
+        </pre>
+        <hr>
+        <div class ="shorthand">
+            <h1> Heading </h1>
+            <p> Paragraph </p>
+        </div>
+        </div>
+    </pre></p> 
+</body>
+</html>

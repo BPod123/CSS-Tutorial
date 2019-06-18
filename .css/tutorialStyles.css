@@ -5,7 +5,6 @@ body {
 
 header  {
     text-align:center;
-    text-decoration: underline;
     font-family:fantacy;
 }
 
@@ -37,5 +36,11 @@ ul.horizontalList li {
     display: block;
     text-align: center;
     padding: 16px;
-    border:1px solid grey;
+    /*border:1px solid grey;*/
+}
+.example    {
+    background-color:white;
+    color:black;
+    font-family:monospace;
+    width:50%;
 }

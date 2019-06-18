@@ -2,3 +2,6 @@
 body {background-color:black;
     color:white;
 }
+a:link    {color:rgb(86, 205, 245);}
+a:hover     {color:yellow;}
+a:visited   {color:blueviolet;}

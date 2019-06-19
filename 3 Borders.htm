@@ -1,0 +1,123 @@
+<!-- Ben Podrazhansky -->
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta name="author" content="Ben Podrazhansky">
+    <link rel="stylesheet" href=".css/darkTheme.css">
+    <link rel="stylesheet" href=".css/tutorialStyles.css">
+    <title>3 Borders</title>
+    <style>
+        .example dd {
+            height: 50%;
+            color: white;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1> 3 Borders </h1>
+        <h3> <ins>Previous:</ins> <ins><a href="2 Colors and backgrounds.htm">2 Colors and Backgrounds</a></ins>
+            <ins>Next:</ins> <a href="4 Margins.htm">4 Margins</a></h3>
+        <hr>
+    </header>
+    <section>
+        <h2> border-style </h2>
+        <p> Borders come in different border-styles:
+            <ul class='example'>
+                <li style="border-style:dashed">dashed </li>
+                <dd>.</dd>
+                <li style="border-style:dotted"> dotted </li>
+                <dd>.</dd>
+                <li style="border-style:double"> double </li>
+                <dd>.</dd>
+                <li style="border-style:groove"> groove </li>
+                <dd>.</dd>
+                <li style='border-style:hidden'> hidden </li>
+                <dd>.</dd>
+                <li style='border-style:inset'> inset </li>
+                <dd>.</dd>
+                <li style='border-style:outset'> outset</li>
+                <dd>.</dd>
+                <li style='border-style:solid'> solid </li>
+                <dd>.</dd>
+                <li style="border-style:ridge"> ridge </li>
+                <dd>.</dd>
+                <li style='border-style:none'> none </li>
+            </ul>
+        </p>
+    </section>
+    <section>
+        <h2> border-width and border-color </h2>
+        <p>border-width is the thickness of the border and border-color</p>
+        <div class='example'>
+            <pre>
+&lt;p style='border-style:solid; border-width: thick; border-color:rgb(22, 235, 22)&gt; Thick Border &lt;p&gt;
+&lt;p style='border-style:solid; border-width: medium; border-color:rgb(51, 123, 206);'&gt; Medium Border &lt;/p&gt;
+&lt;p style='border-style:solid; border-width: 1px; rgb(199, 199, 5);'&gt; 1 Pixel Border &lt;/p&gt;
+        <hr>    </pre>
+            <p style='border-style:solid; border-width: thick; border-color:rgb(22, 235, 22)'> Thick Border <p>
+                    <p style='border-style:solid; border-width: medium; border-color:rgb(51, 123, 206);'> Medium Border
+                    </p>
+                    <p style='border-style:solid; border-width: 1px; border-color:rgb(199, 199, 5);'> 1 Pixel Border
+                    </p>
+        </div>
+    </section>
+    <section>
+        <h2> Setting custom borders for each side </h2>
+        <div class='example'>
+            <pre>
+&lt;p style='border-left-style: dashed; border-right-width:thick; border-top-color:red;
+border-bottom-style:double;'&gt; Example &lt;/p&gt;
+<hr>
+<p style='border-left-style: dashed; border-right-width:thick; border-top-color:red; border-bottom-style:double;'>
+Example</p>     
+</pre>
+        </div>
+        <p> Or you can set a property for each side at once in the format:<br>
+            property: top right bottom left</p>
+        <div class='example'>
+            <pre>
+&lt; p style='border-style:dashed double solid none;'&gt; Example &lt;/p&gt;
+<hr>
+<p style='border-style:dashed double solid none;'>Example </p>
+</pre>
+        </div>
+    </section>
+    <section>
+        <h2> Shortand for borders </h2>
+        <p> If you want to set the properties for all sides at once, use the format:<br>
+            border: border-width border-style border-color<br>
+            Only border-style is required, but if border-width or border-color are included, they must be in the correct
+            order relative to border-style.</p>
+        <div class='example'>
+            <pre>
+&lt;p style='border:1px solid red;'&gt; Example &lt;/p&gt;
+&lt;p style='border thick dashed blue;'&gt; Example &lt;/p&gt;
+&lt;p style='border-top: thick double green; border-bottom: thin solid blue; 
+    border-left: 1px solid grey;'&gt; Example &lt;/p&gt;
+                    <hr></pre>
+            <p style='border:1px solid red;'> Example </p>
+            <p style='border: thick dashed blue;'> Example </p>
+            <p style='border-top: thick double green; border-bottom: thin solid blue; border-left: 1px solid grey;'>
+                Example </p>
+        </div>
+    </section>
+    <section>
+        <h2> Rounded Borders </h2>
+        <p> Use border-radius to set the radius for rounded borders </p>
+        <div class = 'example'>
+            <pre>
+&lt;p style='border: 1px solid blue; border-radius: 3px;'&gt; Example &lt;/p&gt;
+&lt;p style='border: 1px solid blue; border-radius: 10px;'&gt; Example &lt;/p&gt;
+<hr>
+            </pre>
+            <p style='border: 1px solid blue; border-radius: 3px;'> Example </p>
+            <p style='border: 1px solid blue; border-radius: 10px;'> Example </p>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -44,3 +44,7 @@ ul.horizontalList li {
     font-family:monospace;
     width:50%;
 }
+.example hr {
+    width:50%;
+    float:left;
+}

@@ -6,6 +6,7 @@
     <meta name="author" content="Ben Podrazhansky">
     <link rel="stylesheet" href=".css/darkTheme.css">
     <link rel="stylesheet" href=".css/tutorialStyles.css">
+    <title>2 Colors and Backgrounds</title>
     <style>
         .shorthand {
             background: red url('images/smileyFace.png') no-repeat top right;
@@ -71,9 +72,9 @@
 <body>
     <header>
         <h1> 2 Colors and backgrounds </h1>
-        <h3> <ins>Previous:</ins> <ins><a href="1 Syntax.htm">1 Syntax</a></ins> <ins>Next:</ins> <ins><a
-                    href="2 Colors and backgrounds.htm">2 Colors and backgrounds</a></ins></h3>
-        <hr>
+        <h3> <ins>Previous:</ins> <ins><a href="1 Syntax.htm">1 Syntax</a></ins> <ins>Next:</ins> <a
+                    href="3 Borders.htm">3 Borders</a></h3>
+        <hr><br>
     </header>
     <h2> Text color </h2>
     <p> Set the color of the text with either, color name (if supported), rgb values, rgba values, hsl values, or hsla
@@ -98,14 +99,14 @@
         <pre>
             &lt;p&gt; Normal paragraph &lt;/p&gt;
             &lt;p style="background-color:lightgreen"&gt; This paragraph is lightgreen &lt;/p&gt;
-              <hr>
+              <hr><br>
             <p> Normal paragraph </p>
             <p style="background-color:lightgreen;"> This paragraph is lightgreen </p>  
         </pre>
 
 
     </section>
-    <hr>
+    <hr><br>
     <h2> background-image and background-repeat </h2>
     <p> Set the background image of an element with "background-image: url/or/path/to/image;".<br>
         You can also make the background-image repeat itself horizontally or vertically as follows:</p>
@@ -124,17 +125,17 @@
         <pre>
         <p id="bckgndImgP1">&lt;h1&gt; No Background Image &lt;/h1&gt;</p>
         <p id="bckgndImgP2">&lt;h1&gt; No Background Image &lt;/h1&gt;</p>
-        <hr> 
+        <hr><br>
         <h1 id="bckgndImgH1"> No Background Image </h1>
         <h1 id="bckgndImgH2"> No Background Image </h1>
-        <hr></pre>
+        <hr><br></pre>
         <button onClick="repeatHorizontal()"> Repeat Images Horizontally</button>
         <button onClick="repeatVertical()"> Repeat Images Vertically</button>
         <button onClick="noBackground()"> No Background </button>
         <button onClick="reset()"> Reset </button>
         <br><br>
     </section>
-    <hr>
+    <hr><br>
     <h2> background-position and background-attachment </h2>
     <h3 style="text-decoration: underline;"> background-position </h3>
     <p>You can set the position of an image to the enums: 'left', 'right', 'top', 'botton', 'center', 'left center',
@@ -170,7 +171,7 @@
     lacus at neque dictum condimentum. Nulla et nunc vulputate, ullamcorper massa sed, fringilla velit.&lt;/p&gt;
     &lt;/div&gt;
 </pre>
-        <hr>
+        <hr><br>
         <div
             style="background-image:url('images/smileyFace.png'); background-position:right top; background-attachment:fixed; height:10vw; overflow:scroll;">
         
@@ -204,7 +205,7 @@
                 lacus at neque dictum condimentum. Nulla et nunc vulputate, ullamcorper massa sed, fringilla velit.</p>
         </div>
     </section>
-    <hr>
+    <hr><br>
     <h2> Background Shorthand</h2>
     <p> You can set the properties of a background in CSS with one line by putting the values one after another without listing the property in the format:<br>
         background: background-color background-image background-repeat background-position</p>
@@ -226,7 +227,7 @@
         &lt;/body&gt;
 
         </pre>
-        <hr>
+        <hr><br>
         <div class ="shorthand">
             <h1> Heading </h1>
             <p> Paragraph </p>

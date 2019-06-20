@@ -1,0 +1,139 @@
+<!-- Ben Podrazhansky -->
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta name="author" content="Ben Podrazhansky">
+    <link rel="stylesheet" href=".css/darkTheme.css">
+    <link rel="stylesheet" href=".css/tutorialStyles.css">
+    <title>4 Margins</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1> 4 Margins </h1>
+        <h3>
+            <pre><ins>Previous:</ins> <a href='Borders.htm'>3 Borders</a>       <ins>Next:</ins> <ins><a href=".htm">5 Padding</a></ins></pre>
+        </h3>
+        <hr>
+    </header>
+    <section id='propertyValues'>
+        <h2> Margin Property Values: </h2>
+        <ul>
+            <li> <a href='#auto'>auto</a> - Browser automatically calculates margins </li>
+            <li> length - px, cm, vw, mm, in </li>
+            <li> % - Percentage of the parent element's width </li>
+            <li> <a href='#inherit'>inherit</a> - Margin in inherited from parent </li>
+        </ul>
+        <p> Negative values are allowed. </p>
+    </section>
+    <hr style='float:left; width:50%;'><br>
+    <section id='individualSides'>
+        <h2> Set Margins for Individual Sides </h2>
+        <div class='example'>
+            <pre>
+p   {
+    margin-top: 2px;
+    margin-bottom: -50%;
+    margin-left: 10in;
+    margin-right: -5mm;
+}
+            </pre>
+        </div>
+    </section>
+    <section id='shorthand'>
+        <h2> Margin Shorthand </h2>
+        <p> You set the margins in one line in the format:<br>
+        margin: top right bottom left </p>
+        <div class = 'example'>
+<pre>
+p   {
+    margin: 5px 20px 40px 80px;
+    background-color:ligthblue;
+    border:1px solid red;
+}
+<hr>
+&lt;p&gt; Paragraph &lt;/p&gt;
+<p style='margin: 5px 20px 40px 80px;background-color:ligthblue;border:1px solid red;'> Paragraph </p>
+</pre>
+        </div>
+
+    </section>
+    <section id='auto'>
+        <h2> The auto Value </h2>
+        <p> Using 'auto' will put the element in the center of the parent element's margins. </p>
+        <div class='example'>
+            <pre>
+
+p   {
+        border: 1px solid red;
+        background-color:lightblue;
+        width:50%;
+        margin:auto;
+    }
+<hr>
+&lt;p style='border: 1px solid red; background-color:lightblue; width:50%; margin:auto;'&gt; Example &lt;/p&gt;
+<hr>
+<p style='border: 1px solid red; background-color:lightblue; width:50%; margin:auto;'> Example </p>
+</pre>
+        </div>
+    </section>
+    <section id='inherit'>
+        <h2> The inherit Value </h2>
+        <p> The inherit value lets you inherit the margins of the parent element.</p>
+        <div class='example'>
+            <pre>
+div {
+    width:50%;
+    background-color:green;
+    margin-left: 10px;
+}
+p   {
+        background-color:lightblue;
+        border:red;
+        margin:inherit;
+        width:50%;
+    }
+<hr>
+&lt;div&gt;
+    &lt;h3&gt; Normal Heading &lt;/h3&gt;
+    &lt;p&gt; Paragraph &lt;/p&gt;
+&lt;/div&gt;
+<hr>
+<div style='width:50%; background-color:green; margin-left: 10px;'>
+    <h3> Normal Heading</h3>
+<p style='background-color:lightblue; border:red; margin:inherit; width:50%;'> Paragraph </p>
+</div>
+</pre>
+        </div>
+    </section>
+    <section id='collapse'>
+        <h2> Margin Collapse </h2>
+        <p> Top and bottom margins of elements on top of eachother will automatically combine to be the larger of the
+            two so that the spacing between the elements is not the addition of the two, but left and right margins will
+            not automatically collapse. You must set them yourself. </p>
+            <div class = 'example'>
+<pre>
+.ex1    {margin: 20px 0 20px 0;
+         border:1px solid red;}
+.ex2    {margin: 50px 0 50px 0;
+        border:1px dashed blue;
+        
+<hr>
+&lt;p class='ex1'&gt; Paragraph 1 &lt;/p&gt;
+&lt;p class='ex2'&gt; Paragraph 2 &lt;/p&gt;
+<hr>
+</pre>
+<p style='margin: 20px 0 20px 0; border:1px solid red;'> Paragraph 1 </p>
+<p style='margin: 50px 0 50px 0; border: 1px dashed blue;'> Paragraph 2 </p>
+
+
+            </div>
+
+    </section>
+</body>
+
+</html>
